@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  lab01:
+    build: .
+    container_name: lab01
+    stdin_open: true
+    tty: true
+    networks:
+      - lab-network
+    restart: unless-stopped
+
+networks:
+  lab-network:
+    driver: bridge
