@@ -1,1 +1,115 @@
 Coloque aqui todas as respostas das práticas indicadas no README.md
+
+Questão 3. nslookup
+nslookup www.google.com -> IP:172.217.29.196
+nslookup www.whitehouse.gov -> IP:192.0.66.51
+nslookup www.rnp.br -> IP:104.18.26.22
+nslookup www.ufpb.br -> IP:150.165.254.52
+
+Questão 4. ping
+
+2.
+www.ufpb.br -> 23 ms
+www.yahoo.com -> 167 ms
+www.brasil.gov.br -> 75 ms
+www.dce.ufpb.br -> inacessível, mensagem: A solicitação ping não pôde encontrar o host www.dce.ufpb.br.
+
+3.
+www.google.com -> 56ms
+www.rnp.br -> 56ms
+www.whitehouse.gov -> 57ms
+
+Os tempos de resposta foram praticamente iguais, não havendo quase nenhuma diferença entre eles.
+
+Questão 5. traceroute
+
+1.
+ Proto  Endereço local         Endereço externo       Estado
+  TCP    0.0.0.0:22             LAB3-DCX-34:0          LISTENING
+  TCP    0.0.0.0:135            LAB3-DCX-34:0          LISTENING
+  TCP    0.0.0.0:445            LAB3-DCX-34:0          LISTENING
+  TCP    0.0.0.0:5040           LAB3-DCX-34:0          LISTENING
+  TCP    0.0.0.0:5432           LAB3-DCX-34:0          LISTENING
+  TCP    0.0.0.0:7680           LAB3-DCX-34:0          LISTENING
+  TCP    0.0.0.0:11100          LAB3-DCX-34:0          LISTENING
+  TCP    0.0.0.0:49664          LAB3-DCX-34:0          LISTENING
+  TCP    0.0.0.0:49665          LAB3-DCX-34:0          LISTENING
+  TCP    0.0.0.0:49666          LAB3-DCX-34:0          LISTENING
+  TCP    0.0.0.0:49667          LAB3-DCX-34:0          LISTENING
+  TCP    0.0.0.0:49668          LAB3-DCX-34:0          LISTENING
+  TCP    0.0.0.0:49677          LAB3-DCX-34:0          LISTENING
+  TCP    10.0.3.34:139          LAB3-DCX-34:0          LISTENING
+  TCP    10.0.3.34:52357        13.107.246.254:https   CLOSE_WAIT
+  TCP    10.0.3.34:52388        104.208.16.88:https    ESTABLISHED
+  TCP    10.0.3.34:52437        10.0.0.24:5144         ESTABLISHED
+  TCP    10.0.3.34:52463        lb-140-82-113-25-iad:https  ESTABLISHED
+  TCP    10.0.3.34:52520        docker:https           ESTABLISHED
+  TCP    10.0.3.34:52533        pngrub-aa-in-f10:https  ESTABLISHED
+  TCP    10.0.3.34:52534        pngrub-aa-in-f10:https  ESTABLISHED
+  TCP    10.0.3.34:52538        a2-19-10-21:https      ESTABLISHED
+  TCP    10.0.3.34:52548        cj-in-f84:https        ESTABLISHED
+  TCP    10.0.3.34:65029        172.172.255.218:https  ESTABLISHED
+  TCP    10.0.3.34:65036        a2-21-10-16:https      CLOSE_WAIT
+  TCP    10.0.3.34:65203        ce-in-f188:5228        ESTABLISHED
+  TCP    127.0.0.1:11200        LAB3-DCX-34:0          LISTENING
+  TCP    127.0.0.1:11300        LAB3-DCX-34:0          LISTENING
+  TCP    127.0.0.1:11300        kubernetes:65044       ESTABLISHED
+  TCP    127.0.0.1:65044        kubernetes:11300       ESTABLISHED
+  TCP    [::]:22                LAB3-DCX-34:0          LISTENING
+  TCP    [::]:135               LAB3-DCX-34:0          LISTENING
+  TCP    [::]:445               LAB3-DCX-34:0          LISTENING
+  TCP    [::]:5432              LAB3-DCX-34:0          LISTENING
+  TCP    [::]:7680              LAB3-DCX-34:0          LISTENING
+  TCP    [::]:11100             LAB3-DCX-34:0          LISTENING
+  TCP    [::]:49664             LAB3-DCX-34:0          LISTENING
+  TCP    [::]:49665             LAB3-DCX-34:0          LISTENING
+  TCP    [::]:49666             LAB3-DCX-34:0          LISTENING
+  TCP    [::]:49667             LAB3-DCX-34:0          LISTENING
+  TCP    [::]:49668             LAB3-DCX-34:0          LISTENING
+  TCP    [::]:49677             LAB3-DCX-34:0          LISTENING
+  TCP    [::1]:49669            LAB3-DCX-34:0          LISTENING
+  UDP    0.0.0.0:123            *:*
+  UDP    0.0.0.0:500            *:*
+  UDP    0.0.0.0:4500           *:*
+  UDP    0.0.0.0:5050           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5353           *:*
+  UDP    0.0.0.0:5355           *:*
+  UDP    0.0.0.0:55089          *:*
+  UDP    10.0.3.34:137          *:*
+  UDP    10.0.3.34:138          *:*
+  UDP    10.0.3.34:1900         *:*
+  UDP    10.0.3.34:62760        *:*
+  UDP    127.0.0.1:1900         *:*
+  UDP    127.0.0.1:12011        *:*
+  UDP    127.0.0.1:50371        127.0.0.1:50371
+  UDP    127.0.0.1:51982        127.0.0.1:51982
+  UDP    127.0.0.1:62761        *:*
+  UDP    [::]:123               *:*
+  UDP    [::]:500               *:*
+  UDP    [::]:4500              *:*
+  UDP    [::]:5353              *:*
+  UDP    [::]:5353              *:*
+  UDP    [::]:5355              *:*
+  UDP    [::]:55089             *:*
+  UDP    [::1]:1900             *:*
+  UDP    [::1]:62759            *:*
+  UDP    [fe80::fb37:1ee4:2fd9:6f22%10]:1900  *:*
+  UDP    [fe80::fb37:1ee4:2fd9:6f22%10]:62758  *:*
+
+  2.
+  Rotas ativas:
+Endereço de rede          Máscara   Ender. gateway       Interface   Custo
+          0.0.0.0          0.0.0.0       10.0.3.126        10.0.3.34     35
+         10.0.3.0  255.255.255.128      No vínculo         10.0.3.34    291
+        10.0.3.34  255.255.255.255      No vínculo         10.0.3.34    291
+       10.0.3.127  255.255.255.255      No vínculo         10.0.3.34    291
+        127.0.0.0        255.0.0.0      No vínculo         127.0.0.1    331
+        127.0.0.1  255.255.255.255      No vínculo         127.0.0.1    331
+  127.255.255.255  255.255.255.255      No vínculo         127.0.0.1    331
+        224.0.0.0        240.0.0.0      No vínculo         127.0.0.1    331
+        224.0.0.0        240.0.0.0      No vínculo         10.0.3.34    291
+  255.255.255.255  255.255.255.255      No vínculo         127.0.0.1    331
+  255.255.255.255  255.255.255.255      No vínculo         10.0.3.34    291
+
