@@ -112,4 +112,3 @@ Endereço de rede          Máscara   Ender. gateway       Interface   Custo
         224.0.0.0        240.0.0.0      No vínculo         10.0.3.34    291
   255.255.255.255  255.255.255.255      No vínculo         127.0.0.1    331
   255.255.255.255  255.255.255.255      No vínculo         10.0.3.34    291
-
